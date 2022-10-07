@@ -1,30 +1,63 @@
-<template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<template lang="pug">
+#app
+  .wrapper
+    HeaderView
+    main.main
+      router-view
+    FooterView
 </template>
 
+<script>
+import HeaderView from './components/HeaderView.vue';
+import FooterView from './components/FooterView.vue';
+
+export default {
+    name: "App",
+    components: { 
+      HeaderView,
+      FooterView,
+    }
+}
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+[class*="__container"] {
+  max-width: 102.4rem;
+  margin: 0px auto;
+  padding: 0rem 1.5rem;
 }
 
-nav {
-  padding: 30px;
+.wrapper {
+    display: flex;
+    min-height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.main {
+    flex: 1 1 auto;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+#app {
+  min-height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'TT Norms Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #FFFFFF;
+  background: #00AC4E;
+  border-radius: 0.4rem;
+  padding: 1rem 3rem;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    cursor: pointer;
+    background: #0b793c;
   }
 }
 </style>
