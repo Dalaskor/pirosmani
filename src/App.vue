@@ -60,4 +60,79 @@ export default {
     background: #0b793c;
   }
 }
+
+.pagination {
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__page {
+        border-radius: 0.5rem;
+        width: 4.1rem;
+        height: 4.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &_selected {
+            background: #00AC4E;
+            
+            .pagination__page-link {
+              color: #FFFFFF;
+            }
+        }
+    }
+
+    &__page-link {
+        font-family: 'TT Norms Pro';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #000000;
+    }
+
+    &__next {
+      a {
+        content: '';
+        width: 4.1rem;
+        height: 4.1rem;
+        margin-left: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        background: url('assets/img/icons/arrow-pag.svg') no-repeat center;
+
+        &:hover {
+            cursor: pointer;
+        }
+      }
+    }
+
+    &__prev {
+      a {
+        content: '';
+        width: 4.1rem;
+        height: 4.1rem;
+        margin-left: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        background: url('assets/img/icons/arrow-pag.svg') no-repeat center;
+        transform: rotate(-180deg);
+
+        &:hover {
+            cursor: pointer;
+        }
+      }
+    }
+}
 </style>

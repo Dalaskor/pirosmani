@@ -102,6 +102,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
+        text-transform: uppercase;
 
         &:hover {
             cursor: pointer;
