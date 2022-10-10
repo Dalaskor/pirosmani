@@ -2,6 +2,8 @@
 BannerView
 FoodNavView
 AllProductsView
+VideoView
+BannerDeliveryView
 </template>
 
 <script>
@@ -9,6 +11,8 @@ AllProductsView
 import BannerView from '@/components/BannerView.vue'
 import FoodNavView from '@/components/FoodNavView.vue'
 import AllProductsView from '@/components/AllProductsView.vue'
+import VideoView from '@/components/VideoView.vue'
+import BannerDeliveryView from '@/components/BannerDeliveryView.vue'
 
 export default {
   name: 'HomeView',
@@ -16,6 +20,8 @@ export default {
     BannerView,
     FoodNavView,
     AllProductsView,
+    VideoView,
+    BannerDeliveryView,
   }
 }
 </script>

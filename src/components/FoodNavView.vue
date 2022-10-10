@@ -82,11 +82,15 @@ export default {
         display: flex;
         align-items: center;
         gap: 4.7rem;
+        user-select: none;
     }
 
-    &__slider {}
+    &__slider {
+        user-select: none;
+    }
 
     &__slide {
+        user-select: none;
     }
 
     &__link {
@@ -103,6 +107,7 @@ export default {
         align-items: center;
         justify-content: center;
         text-transform: uppercase;
+        user-select: none;
 
         &:hover {
             cursor: pointer;
