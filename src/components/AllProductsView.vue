@@ -71,6 +71,8 @@ export default {
                     return this.PRODUCTS.filter(elem => elem.userId === 10);
                 case 'drinks':
                     return this.PRODUCTS.filter(elem => elem.userId === 4);
+                default:
+                    return [];
             };
         },
         pages() {

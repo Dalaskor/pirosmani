@@ -1,10 +1,9 @@
 <template lang="pug">
-#app
-  .wrapper
-    HeaderView
-    main.main
-      router-view
-    FooterView
+.wrapper
+  HeaderView
+  main.main
+    router-view
+  FooterView
 </template>
 
 <script>
@@ -21,6 +20,14 @@ export default {
 </script>
 
 <style lang="scss">
+html, body {
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+}
+
 [class*="__container"] {
   max-width: 102.4rem;
   margin: 0px auto;
@@ -28,18 +35,15 @@ export default {
 }
 
 .wrapper {
-    display: flex;
-    min-height: 100%;
-    overflow: hidden;
-    flex-direction: column;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .main {
-    flex: 1 1 auto;
-}
-
-#app {
   min-height: 100%;
+  flex: 1 1 auto;
 }
 
 .btn {

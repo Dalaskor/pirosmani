@@ -1,5 +1,5 @@
 <template lang="pug">
-section.header
+header.header
     .header__container
         router-link(to='/').header__logo.main-logo
             img(src="../assets/img/header/main-logo.svg")
@@ -142,7 +142,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .header {
     background: #FFFFFF;

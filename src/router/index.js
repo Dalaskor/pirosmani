@@ -8,6 +8,11 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/:pathMatch(.*)*',
+    name: 'notFound',
+    component: () => import(/* webpackChunkName: "notFound" */ '../views/NotFoundView.vue')
+  },
+  {
     path: '/soups',
     name: 'soups',
     component: () => import(/* webpackChunkName: "soups" */ '../views/FilteredProductsView.vue')
