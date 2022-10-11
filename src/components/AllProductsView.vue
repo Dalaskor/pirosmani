@@ -45,16 +45,44 @@ export default {
         ...mapGetters([
             'PRODUCTS',
         ]),
+        filteredProducts() {
+            switch(this.$route.name) {
+                case 'home':
+                    return this.PRODUCTS;
+                case 'soups':
+                    return this.PRODUCTS.filter(elem => elem.userId === 1);
+                case 'hachapur':
+                    return this.PRODUCTS.filter(elem => elem.userId === 2);
+                case 'snacks':
+                    return this.PRODUCTS.filter(elem => elem.userId === 3);
+                case 'khinkali':
+                    return this.PRODUCTS.filter(elem => elem.userId === 4);
+                case 'barbecue':
+                    return this.PRODUCTS.filter(elem => elem.userId === 5);
+                case 'sauces':
+                    return this.PRODUCTS.filter(elem => elem.userId === 6);
+                case 'salads':
+                    return this.PRODUCTS.filter(elem => elem.userId === 7);
+                case 'dishes':
+                    return this.PRODUCTS.filter(elem => elem.userId === 8);
+                case 'garnish':
+                    return this.PRODUCTS.filter(elem => elem.userId === 9);
+                case 'desserts':
+                    return this.PRODUCTS.filter(elem => elem.userId === 10);
+                case 'drinks':
+                    return this.PRODUCTS.filter(elem => elem.userId === 4);
+            };
+        },
         pages() {
             const COUNT = 16;
 
-            return Math.ceil(this.PRODUCTS.length / COUNT);
+            return Math.ceil(this.filteredProducts.length / COUNT);
         },
         paginatedProducts() {
             const from = (this.pageNumber - 1) * this.productsPerPage;
             const to = from + this.productsPerPage;
 
-            return this.PRODUCTS.slice(from, to);
+            return this.filteredProducts.slice(from, to);
         },
     },
     methods: {

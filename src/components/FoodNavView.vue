@@ -10,27 +10,27 @@ section.food-nav
             @slideChange="onSlideChange"
         ).food-nav__slider
             swiper-slide.food-nav__slide 
-                router-link(to='/').food-nav__link Супы
+                router-link(to='/soups').food-nav__link Супы
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Хачапуры
+                router-link(to='/hachapur').food-nav__link Хачапуры
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Закуски
+                router-link(to='/snacks').food-nav__link Закуски
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Хинкали
+                router-link(to='/khinkali').food-nav__link Хинкали
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Шашлык
+                router-link(to='/barbecue').food-nav__link Шашлык
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Соусы
+                router-link(to='/sauces').food-nav__link Соусы
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Салаты
+                router-link(to='/salads').food-nav__link Салаты
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Блюда
+                router-link(to='/dishes').food-nav__link Блюда
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Гарнир
+                router-link(to='/garnish').food-nav__link Гарнир
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Десерты
+                router-link(to='/desserts').food-nav__link Десерты
             swiper-slide.food-nav__slide
-                router-link(to='/').food-nav__link Напитки
+                router-link(to='/drinks').food-nav__link Напитки
         div(@click="mySlideNext").food-nav__next
             img(src="../assets/img/icons/arrow.svg")
 </template>
@@ -111,6 +111,12 @@ export default {
 
         &:hover {
             cursor: pointer;
+            color: #FFFFFF;
+            background-color: #fff;
+            background: #00AC4E;
+        }
+
+        &.router-link-active {
             color: #FFFFFF;
             background-color: #fff;
             background: #00AC4E;

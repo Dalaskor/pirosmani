@@ -90,6 +90,11 @@ export default {
         border-radius: 0.4rem;
         padding: 1rem 2.7rem;
         margin-top: 1.3rem;
+
+        &:hover{
+            cursor: pointer;
+            background: #0b793c;
+        }
     }
 }
 </style>

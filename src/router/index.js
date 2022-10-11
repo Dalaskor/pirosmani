@@ -7,14 +7,61 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  // }
+  {
+    path: '/soups',
+    name: 'soups',
+    component: () => import(/* webpackChunkName: "soups" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/hachapur',
+    name: 'hachapur',
+    component: () => import(/* webpackChunkName: "hachapur" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/snacks',
+    name: 'snacks',
+    component: () => import(/* webpackChunkName: "snacks" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/khinkali',
+    name: 'khinkali',
+    component: () => import(/* webpackChunkName: "khinkali" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/barbecue',
+    name: 'barbecue',
+    component: () => import(/* webpackChunkName: "barbecue" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/sauces',
+    name: 'sauces',
+    component: () => import(/* webpackChunkName: "sauces" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/salads',
+    name: 'salads',
+    component: () => import(/* webpackChunkName: "salads" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/dishes',
+    name: 'dishes',
+    component: () => import(/* webpackChunkName: "dishes" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/garnish',
+    name: 'garnish',
+    component: () => import(/* webpackChunkName: "garnish" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/desserts',
+    name: 'desserts',
+    component: () => import(/* webpackChunkName: "desserts" */ '../views/FilteredProductsView.vue')
+  },
+  {
+    path: '/drinks',
+    name: 'drinks',
+    component: () => import(/* webpackChunkName: "drinks" */ '../views/FilteredProductsView.vue')
+  }
 ]
 
 const router = createRouter({
