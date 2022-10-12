@@ -1,5 +1,9 @@
 <template lang="pug">
 section.banner
+    MailingModalView(
+        v-if="isShowMailingModal",
+        @close="isShowMailingModal=false",
+    )
     .banner__container
         .banner__body
             .banner__left
@@ -7,7 +11,7 @@ section.banner
                     | Подарок на первый заказ.
                 .banner__description
                     | Получите 500 рублей за подписку на рассылку
-                a.banner__btn.btn
+                a(@click="isShowMailingModal=true").banner__btn.btn
                     | Подписаться
             .banner__right
                 .banner__img
@@ -15,8 +19,18 @@ section.banner
 </template>
 
 <script>
+import MailingModalView from './MailingModalView.vue'
+
 export default {
     name: 'BannerView',
+    data() {
+        return {
+            isShowMailingModal: false,
+        }
+    },
+    components: {
+        MailingModalView,
+    }
 }
 </script>
 

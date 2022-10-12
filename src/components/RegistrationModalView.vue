@@ -1,32 +1,33 @@
 <template lang="pug">
-.modal__mask
-    .modal__wrapper
-        .modal__container
-            div(@click="$emit('close')").modal__close
-                img(src="../assets/img/icons/close.svg")
-            .modal__header
-                .modal__icon
-                    img(src="../assets/img/icons/profile-modal.svg")
-                .modal__title
-                    | Регистрация
-            .modal__body
-                form.modal__form
-                    .modal__input.modal__input_phone
-                        input(type="tel", name="phone", placeholder="Телефон")
-                    .modal__input.modal__input_password
-                        input(type="password", name="password", placeholder="Пароль")
-                    .modal__input.modal__input_password
-                        input(type="password", name="submit-password", placeholder="Подтвердите пароль")
-                    .modal__inner
-                        .modal__checkbox
-                            input(type="checkbox", id="cbOffers", name="cbOffers", value="yes")
-                            label(for="cbOffers") Хочу получать выгодные предложения от магазина
-                        .modal__checkbox
-                            input(type="checkbox", id="cbPolitics", name="cbPolitics", value="yes")
-                            label(for="cbPolitics")
-                                p Принимаю условия 
-                                    a Пользовательского соглашения, Политики конфиденциальности
-                    input(type="button", value="Зарегистрироваться", @click="$emit('signIn')").modal__submit
+transition(name="modal")
+    .modal__mask
+        .modal__wrapper
+            .modal__container
+                div(@click="$emit('close')").modal__close
+                    img(src="../assets/img/icons/close.svg")
+                .modal__header
+                    .modal__icon
+                        img(src="../assets/img/icons/profile-modal.svg")
+                    .modal__title
+                        | Регистрация
+                .modal__body
+                    form.modal__form
+                        .modal__input.modal__input_phone
+                            input(type="tel", name="phone", placeholder="Телефон")
+                        .modal__input.modal__input_password
+                            input(type="password", name="password", placeholder="Пароль")
+                        .modal__input.modal__input_password
+                            input(type="password", name="submit-password", placeholder="Подтвердите пароль")
+                        .modal__inner
+                            .modal__checkbox
+                                input(type="checkbox", id="cbOffers", name="cbOffers", value="yes")
+                                label(for="cbOffers") Хочу получать выгодные предложения от магазина
+                            .modal__checkbox
+                                input(type="checkbox", id="cbPolitics", name="cbPolitics", value="yes")
+                                label(for="cbPolitics")
+                                    p Принимаю условия 
+                                        a Пользовательского соглашения, Политики конфиденциальности
+                        input(type="button", value="Зарегистрироваться", @click="$emit('signIn')").modal__submit
 </template>
 
 <script>
