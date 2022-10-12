@@ -13,7 +13,7 @@ footer.footer
                 | График работы по будням с 9:00 до 18:00
             .footer__email
                 | Email: info@.ru
-            a.footer__support
+            router-link(to='/support').footer__support
                 | Поддержка
             .footer__info
                 .footer__copyright
