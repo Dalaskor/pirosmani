@@ -19,7 +19,7 @@ header.header
             li.header__item
                 div(@mouseover="isShowDropDown=true").header__link Меню
             li.header__item
-                router-link(to='/').header__link Доставка
+                router-link(to='/delivery').header__link Доставка
             li.header__item
                 router-link(to='/').header__link Оплата
             li.header__item
