@@ -21,7 +21,7 @@ header.header
             li.header__item
                 router-link(to='/delivery').header__link Доставка
             li.header__item
-                router-link(to='/').header__link Оплата
+                router-link(to='/payment').header__link Оплата
             li.header__item
                 router-link(to='/').header__link Бронь стола
         .header__contacts

@@ -1,9 +1,9 @@
 <template lang="pug">
-section.delivery
-    .delivery__container
-        .delivery__title
-            | Доставка
-        .delivery__body
+section.payment
+    .payment__container
+        .payment__title
+            | Оплата
+        .payment__body
             p
                 | Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde eius quasi
                 | mollitia aliquid quaerat doloribus sint cum error nam quidem? Nulla nesciunt
@@ -22,11 +22,11 @@ section.delivery
                 | quae recusandae. Cupiditate voluptas mollitia laboriosam maiores placeat.
                 | Ratione voluptatibus, cumque soluta est qui voluptatem ex exercitationem?
                 | Voluptate ipsam neque non, magnam quidem nulla doloremque esse sed recusandae
-        .delivery__bottom
-            router-link(to='/').delivery__catalog
+        .payment__bottom
+            router-link(to='/').payment__catalog
                 | В каталог
-            router-link(to='/payment').delivery__payment
-                p Об оплате
+            router-link(to='/delivery').payment__delivery
+                p О доставке
                 .icon
                     img(src="../assets/img/icons/arrow-link.svg")
 
@@ -34,12 +34,12 @@ section.delivery
 
 <script>
 export default {
-    name: 'DeliverySectionView',
+    name: 'PaymentSectionView',
 }
 </script>
 
 <style scoped lang="scss">
-.delivery {
+.payment {
     padding-top: 4.5rem;
     padding-bottom: 6rem;
 
@@ -97,7 +97,7 @@ export default {
         }
     }
 
-    &__payment {
+    &__delivery {
         font-family: 'TT Norms Pro';
         font-style: normal;
         font-weight: 400;
