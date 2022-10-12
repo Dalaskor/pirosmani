@@ -1,6 +1,16 @@
 <template lang="pug">
 header.header
-    AuthorizationModalView(v-if="isShowAuthModal", @close="isShowAuthModal=false")
+    AuthorizationModalView(
+        v-if="isShowAuthModal",
+        @close="isShowAuthModal=false",
+        @showRegister="showRegisterModal",
+        @logIn="",
+    )
+    RegistrationModalView(
+        v-if="isShowRegistModal",
+        @close="isShowRegistModal=false",
+        @signIn="",
+    )
     .header__container
         router-link(to='/').header__logo.main-logo
             img(src="../assets/img/header/main-logo.svg")
@@ -133,6 +143,7 @@ header.header
 
 <script>
 import AuthorizationModalView from './AuthorizationModalView.vue'
+import RegistrationModalView from './RegistrationModalView.vue'
 
 export default {
   name: 'HeaderView',
@@ -140,12 +151,19 @@ export default {
     return {
         isShowDropDown: false,
         isShowAuthModal: false,
+        isShowRegistModal: false,
+        isAuthorized: false,
     };
   },
   components: {
     AuthorizationModalView,
+    RegistrationModalView,
   },
   methods: {
+    showRegisterModal() {
+        this.isShowAuthModal = false;
+        this.isShowRegistModal = true;
+    },
   },
 }
 </script>
