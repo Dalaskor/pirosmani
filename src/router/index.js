@@ -81,6 +81,12 @@ const routes = [
     path: '/support',
     name: 'support',
     component: () => import(/* webpackChunkName: "support" */ '../views/SupportView.vue')
+  },
+  {
+    path: '/product/:id',
+    name: 'product',
+    component: () => import(/* webpackChunkName: "support" */ '../views/ProductDetailView.vue'),
+    props: true
   }
 ]
 

@@ -8,7 +8,7 @@
         | {{ description }}
     .product__price
         | 1 050 ₽/кг
-    a.product__btn
+    a(@click="routeProduct").product__btn
         | В корзину
 </template>
 
@@ -28,7 +28,17 @@ export default {
                 return {};
             }
         }
-    }
+    },
+    methods: {
+        routeProduct () {
+            this.$router.push({
+                name: 'product',
+                params: {
+                    id: this.product_data.id,
+                },
+            });      
+        },
+    },
 }
 </script>
 

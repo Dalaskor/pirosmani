@@ -156,8 +156,8 @@ export default {
     return {
         isShowDropDown: false,
         isShowAuthModal: false,
-        isShowRegistModal: false,
         isShowBookingModal: false,
+        isShowRegistModal: false,
         isAuthorized: false,
     };
   },
