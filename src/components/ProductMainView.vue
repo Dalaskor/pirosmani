@@ -32,7 +32,7 @@ section.product-main
                 .sidebar__buttons
                     .sidebar__buy
                         | Купить
-                    .sidebar__cart
+                    router-link(to="/cart").sidebar__cart
                         img(src="../assets/img/icons/cart-product.svg")
 </template>
 
