@@ -15,7 +15,119 @@ header.header
         v-if="isShowBookingModal",
         @close="isShowBookingModal=false",
     )
+    div(
+        v-if="isShowMenu"
+    ).menu
+        .menu__header
+            div(@click="isShowMenu=false").menu__close
+                img(src="../assets/img/icons/arrow-menu.svg")
+            router-link(to="/").menu__logo.main-logo
+                img(src="../assets/img/header/main-logo.svg")
+                img(src="../assets/img/header/chel.svg")
+        .menu__body
+            .menu__list
+                div(
+                    @click="toggleAccordion()",
+                    :aria-expanded="iOpenAccordion",
+                    :aria-controls="`collapse${_uid}`"
+                ).menu__item
+                    .menu__item-logo
+                        img(src="../assets/img/icons/menu-menu.svg")
+                    .menu__item-name Меню
+                    .menu__item-arrow
+                        img(src="../assets/img/icons/arrow-menu.svg")
+                div(
+                    v-show="isOpenAccordion",
+                    :id="`collapse${_uid}`"
+                ).menu__sub-items
+                    router-link(to="/soups").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-soups.svg")
+                        .menu__item-name Супы
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/hachapur").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-hachapur.svg")
+                        .menu__item-name Хачапури
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/snacks").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-snacks.svg")
+                        .menu__item-name Холодные закуски
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/khinkali").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-khinkali.svg")
+                        .menu__item-name Хинкали
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/barbecue").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-barbecue.svg")
+                        .menu__item-name Шашлык
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/sauces").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-sauces.svg")
+                        .menu__item-name Соусы
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/salads").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-salads.svg")
+                        .menu__item-name Салаты
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/dishes").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-dishes.svg")
+                        .menu__item-name Горячие блюда
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/garnish").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-garnish.svg")
+                        .menu__item-name Гарнир
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/desserts").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-desserts.svg")
+                        .menu__item-name Десерты
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                    router-link(to="/drinks").menu__item.menu__item_sub
+                        .menu__item-logo
+                            img(src="../assets/img/icons/menu-drinks.svg")
+                        .menu__item-name Напитки
+                        .menu__item-arrow
+                            img(src="../assets/img/icons/arrow-menu.svg")
+                router-link(to="/delivery").menu__item
+                    .menu__item-logo
+                        img(src="../assets/img/icons/menu-delivery.svg")
+                    .menu__item-name Доставка
+                    .menu__item-arrow
+                        img(src="../assets/img/icons/arrow-menu.svg")
+                router-link(to="/payment").menu__item
+                    .menu__item-logo
+                        img(src="../assets/img/icons/menu-payment.svg")
+                    .menu__item-name Оплата
+                    .menu__item-arrow
+                        img(src="../assets/img/icons/arrow-menu.svg")
+                router-link(to="/support").menu__item
+                    .menu__item-logo
+                        img(src="../assets/img/icons/menu-support.svg")
+                    .menu__item-name Поддержка
+                    .menu__item-arrow
+                        img(src="../assets/img/icons/arrow-menu.svg")
+
     .header__container
+        div(@click="isShowMenu=true").header__menu-btn
+            img(src="../assets/img/icons/menu-btn.svg")
         router-link(to='/').header__logo.main-logo
             img(src="../assets/img/header/main-logo.svg")
             img(src="../assets/img/header/chel.svg")
@@ -158,7 +270,9 @@ export default {
         isShowAuthModal: false,
         isShowBookingModal: false,
         isShowRegistModal: false,
+        isShowMenu: false,
         isAuthorized: false,
+        isOpenAccordion: false,
     };
   },
   components: {
@@ -171,11 +285,109 @@ export default {
         this.isShowAuthModal = false;
         this.isShowRegistModal = true;
     },
+    toggleAccordion() {
+        this.isOpenAccordion = !this.isOpenAccordion;
+    },
   },
 }
 </script>
 
 <style scoped lang="scss">
+.menu {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 25rem;
+    z-index: 999;
+    background: #343E48;
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    @media (max-width: 48rem) {
+        display: block;
+    }
+
+    &__header {
+        background: #FFFFFF;
+        padding: 1.5rem 0rem 1.5rem 3.4rem;
+        border-radius: 0 0.5rem 0.5rem 0;
+        display: flex;
+        align-items: center;
+        gap: 5.3rem;
+    }
+
+    &__body {
+        background: #343E48;
+        height: 100%;
+    }
+
+    &__close {
+        width: 2rem;
+        height: 2rem;
+        background: #00AC4E;
+        border-radius: 0.5rem;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__logo {}
+
+    &__list {
+        margin-top: 2.5rem;
+        padding: 0 2.8rem 0 2.1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-top: 2.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &-name {
+            font-family: 'TT Hoves';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: #FFFFFF;
+            margin-left: 0.7rem;
+        }
+
+        &-arrow {
+            transform: rotate(180deg);
+            margin-left: auto;
+        }
+
+        &_sub {
+            margin-top: 1.3rem;
+        }
+    }
+
+    &__sub-items {
+        margin-top: 1.1rem;
+        padding-left: 2.5rem;
+    }
+}
+
 .header {
     background: #FFFFFF;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.12);
@@ -187,6 +399,25 @@ export default {
         padding-top: 3.4rem;
         padding-bottom: 3.4rem;
         position: relative;
+
+        @media (max-width: 48rem) {
+            justify-content: center;      
+            gap: 5rem;
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__menu-btn {
+        display: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        @media (max-width: 48rem) {
+            display: block;
+        }
     }
 
     &__logo {
@@ -199,6 +430,10 @@ export default {
         display: flex;
         align-items: center;
         gap: 4.5rem;
+
+        @media (max-width: 48rem) {
+            display: none;
+        }
     }
 
     &__item {}
@@ -223,6 +458,10 @@ export default {
         align-items: center;
         gap: 0.5rem;
 
+        @media (max-width: 48rem) {
+            display: none;
+        }
+
         svg {
             path {
                 fill: #00AC4E;
@@ -236,10 +475,6 @@ export default {
             font-size: 1.8rem;
             line-height: 2.1rem;
             color: #000000;
-
-            @media (max-width: 48rem) {
-                display: none;
-            }
         }
     }
 
@@ -247,6 +482,10 @@ export default {
         display: flex;
         align-items: center;
         gap: 3rem;
+
+        @media (max-width: 48rem) {
+            margin-left: auto;   
+        }
     }
 
     &__profile {
@@ -255,6 +494,7 @@ export default {
                 fill: #00AC4E;
             }
         }
+
     }
 
     &__cart {
