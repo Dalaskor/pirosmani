@@ -72,6 +72,10 @@ export default {
         display: flex;
         justify-content: space-between;
         gap: 5rem;
+
+        @media (max-width: 48rem) {
+            flex-direction: column;
+        }
     }
 
     &__left {
@@ -112,6 +116,11 @@ export default {
     display: flex;
     align-items: center;
 
+    @media (max-width: 48rem) {
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+
     &:last-child {
         border-bottom: 0.1rem solid #EBEBEB;
     }
@@ -128,6 +137,12 @@ export default {
         background: #00AC4E;
         border-radius: 0.5rem;
         margin-left: 1.5rem;
+
+        @media (max-width: 48rem) {
+            width: 3.9rem;
+            height: 2.8rem;
+            margin-left: 0rem;
+        }
     }
 
     &__name {
@@ -138,6 +153,11 @@ export default {
         line-height: 2.1rem;
         color: #000000;
         margin-left: 3.8rem;
+
+        @media (max-width: 48rem) {
+            margin-left: 0rem;
+            // font-size: 0.8rem;
+        }
     }
 
     &__count {
@@ -181,6 +201,10 @@ export default {
             border-radius: 0.5rem;
             text-align: center;
         }
+
+        @media (max-width: 48rem) {
+            // margin-left: 0;
+        }
     }
 
     &__price {
@@ -191,6 +215,10 @@ export default {
         line-height: 2.4rem;
         color: #000000;
         margin-left: 6.3rem;
+
+        @media (max-width: 48rem) {
+            margin-left: 0rem;
+        }
     }
 }
 
@@ -200,6 +228,10 @@ export default {
     box-shadow: 0rem 0rem 3rem rgba(0, 0, 0, 0.06);
     border-radius: 2rem;
     padding: 5rem 3.2rem 4rem;
+
+    @media (max-width: 48rem) {
+        width: 100%;
+    }
 
     &__title {
         font-family: 'TT Norms Pro';
