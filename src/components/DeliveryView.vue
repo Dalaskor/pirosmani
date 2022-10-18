@@ -95,6 +95,10 @@ export default {
             cursor: pointer;
             background: #0b793c;
         }
+
+        @media (max-width: 48rem) {
+            font-size: 1.5rem;
+        }
     }
 
     &__payment {
@@ -110,6 +114,10 @@ export default {
 
         &:hover {
             cursor: pointer;
+        }
+
+        @media (max-width: 48rem) {
+            font-size: 1.7rem;   
         }
 
         .icon {
