@@ -29,15 +29,20 @@ export default {
         box-shadow: 0px 0px 18.0727px rgba(0, 0, 0, 0.03);
         border-radius: 1.8rem;
         display: flex;
+        justify-content: space-between;
         gap: 4rem;
     }
 
     &__left {
         padding-top: 3.1rem;
         padding-left: 4rem;
+        padding-bottom: 2.6rem;
+        // width: 14.1rem;
     }
 
-    &__right {}
+    &__right {
+        width: 43.4rem;
+    }
 
     &__title {
         font-family: 'TT Norms Pro';
@@ -69,12 +74,12 @@ export default {
 
     &__image {
         width: 43.4rem;
-        height: 24rem;
+        height: 100%;
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 }
