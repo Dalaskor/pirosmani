@@ -40,85 +40,85 @@ header.header
                     v-show="isOpenAccordion",
                     :id="`collapse${_uid}`"
                 ).menu__sub-items
-                    router-link(to="/soups").menu__item.menu__item_sub
+                    router-link(to="/soups", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-soups.svg")
                         .menu__item-name Супы
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/hachapur").menu__item.menu__item_sub
+                    router-link(to="/hachapur", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-hachapur.svg")
                         .menu__item-name Хачапури
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/snacks").menu__item.menu__item_sub
+                    router-link(to="/snacks", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-snacks.svg")
                         .menu__item-name Холодные закуски
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/khinkali").menu__item.menu__item_sub
+                    router-link(to="/khinkali", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-khinkali.svg")
                         .menu__item-name Хинкали
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/barbecue").menu__item.menu__item_sub
+                    router-link(to="/barbecue", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-barbecue.svg")
                         .menu__item-name Шашлык
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/sauces").menu__item.menu__item_sub
+                    router-link(to="/sauces", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-sauces.svg")
                         .menu__item-name Соусы
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/salads").menu__item.menu__item_sub
+                    router-link(to="/salads", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-salads.svg")
                         .menu__item-name Салаты
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/dishes").menu__item.menu__item_sub
+                    router-link(to="/dishes", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-dishes.svg")
                         .menu__item-name Горячие блюда
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/garnish").menu__item.menu__item_sub
+                    router-link(to="/garnish", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-garnish.svg")
                         .menu__item-name Гарнир
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/desserts").menu__item.menu__item_sub
+                    router-link(to="/desserts", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-desserts.svg")
                         .menu__item-name Десерты
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                    router-link(to="/drinks").menu__item.menu__item_sub
+                    router-link(to="/drinks", @click="hideMenu").menu__item.menu__item_sub
                         .menu__item-logo
                             img(src="../assets/img/icons/menu-drinks.svg")
                         .menu__item-name Напитки
                         .menu__item-arrow
                             img(src="../assets/img/icons/arrow-menu.svg")
-                router-link(to="/delivery").menu__item
+                router-link(to="/delivery", @click="hideMenu").menu__item
                     .menu__item-logo
                         img(src="../assets/img/icons/menu-delivery.svg")
                     .menu__item-name Доставка
                     .menu__item-arrow
                         img(src="../assets/img/icons/arrow-menu.svg")
-                router-link(to="/payment").menu__item
+                router-link(to="/payment", @click="hideMenu").menu__item
                     .menu__item-logo
                         img(src="../assets/img/icons/menu-payment.svg")
                     .menu__item-name Оплата
                     .menu__item-arrow
                         img(src="../assets/img/icons/arrow-menu.svg")
-                router-link(to="/support").menu__item
+                router-link(to="/support", @click="hideMenu").menu__item
                     .menu__item-logo
                         img(src="../assets/img/icons/menu-support.svg")
                     .menu__item-name Поддержка
