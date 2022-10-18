@@ -92,6 +92,13 @@ export default {
     &__container {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 48rem) {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            min-width: 100%;
+        }
     }
 
     &__left {}
@@ -108,6 +115,11 @@ export default {
             height: 100%;
             object-fit: cover;
         }
+
+        @media (max-width: 48rem) {
+            width: 100%;
+            height: 20.9rem;
+        }
     }
 
     &__sidebar {}
@@ -119,6 +131,10 @@ export default {
     box-shadow: 0rem 0rem 2.7rem rgba(0, 0, 0, 0.06);
     border-radius: 1.5rem;
     padding: 3.1rem 2.9rem;
+
+    @media (max-width: 48rem) {
+        min-width: 100%;
+    }
 
     &__name {
         font-family: 'TT Norms Pro';

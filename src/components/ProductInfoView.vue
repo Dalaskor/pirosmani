@@ -89,6 +89,10 @@ export default {
     &__main {
         display: flex;
         gap: 4rem;
+
+        @media (max-width: 48rem) {
+            flex-direction: column;
+        }
     }
 
     &__title {
