@@ -76,6 +76,10 @@ export default {
         width: 43.4rem;
         height: 100%;
 
+        @media (max-width: 48rem) {
+            display: none;
+        }
+
         img {
             width: 100%;
             height: 100%;

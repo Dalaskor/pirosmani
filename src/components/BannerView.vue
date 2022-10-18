@@ -88,6 +88,10 @@ export default {
         height: 100%;
         border-radius: 1.8rem;
 
+        @media (max-width: 48rem) {
+            display: none;
+        }
+
         img {
             width: 100%;
             height: 100%;
