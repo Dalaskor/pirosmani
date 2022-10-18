@@ -24,10 +24,18 @@ export default {
     &__content {
         width: 100vw;
         min-height: 64.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         img {
             width: 100vw;
+            height: 100%;
             object-fit: cover;
+        }
+
+        @media (max-width: 48rem) {
+            min-height: 0;
         }
     }
 
