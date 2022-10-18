@@ -53,6 +53,10 @@ export default {
             &::placeholder {
                 color: #BDBDBD;
             }
+
+            @media (max-width: 48rem) {
+                width: 100%;
+            }
         }
     }
 
