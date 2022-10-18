@@ -2,10 +2,11 @@
 section.food-nav
     .food-nav__container
         swiper(
-            :slides-per-view="4",
+            :slides-per-view="1",
             :space-between="40",
             :loop="true",
             :navigation="{nextEl: '.food-nav__next'}",
+            :breakpoints="swiperOptions.breakpoints",
             @swiper="onSwiper",
             @slideChange="onSlideChange"
         ).food-nav__slider
@@ -36,17 +37,32 @@ section.food-nav
 </template>
 
 <script>
-import { Navigation } from 'swiper';
+// import { Navigation } from 'swiper';
+import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 
+SwiperCore.use([Navigation]);
+
 export default {
     name: "FoodNavView",
-    data() {
-        return {};
-    },
+    data: () => ({
+        swiperOptions: {
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                },
+                480: {
+                    slidesPerView: 3,
+                },
+                640: {
+                    slidesPerView: 4,
+                },
+            },
+        },
+    }),
     components: {
         Swiper,
         SwiperSlide,

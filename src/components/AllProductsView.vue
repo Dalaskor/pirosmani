@@ -127,7 +127,8 @@ export default {
         margin-bottom: 4.5rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 5.6rem;
+        justify-content: space-between;
+        gap: 5.6rem 2.6rem;
     }
 
     &__btn-pag {
