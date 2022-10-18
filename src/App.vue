@@ -1,5 +1,5 @@
 <template lang="pug">
-.wrapper
+div.wrapper
   HeaderView
   main.main
     router-view
@@ -22,6 +22,10 @@ export default {
 <style lang="scss">
 html, body {
   height: 100%;
+}
+
+.scrollLock {
+  overflow: hidden;
 }
 
 #app {

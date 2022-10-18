@@ -16,10 +16,10 @@ header.header
         @close="isShowBookingModal=false",
     )
     div(
-        v-if="isShowMenu"
+        v-if="isShowMenu",
     ).menu
         .menu__header
-            div(@click="isShowMenu=false").menu__close
+            div(@click="hideMenu").menu__close
                 img(src="../assets/img/icons/arrow-menu.svg")
             router-link(to="/").menu__logo.main-logo
                 img(src="../assets/img/header/main-logo.svg")
@@ -126,7 +126,7 @@ header.header
                         img(src="../assets/img/icons/arrow-menu.svg")
 
     .header__container
-        div(@click="isShowMenu=true").header__menu-btn
+        div(@click="showMenu").header__menu-btn
             img(src="../assets/img/icons/menu-btn.svg")
         router-link(to='/').header__logo.main-logo
             img(src="../assets/img/header/main-logo.svg")
@@ -288,6 +288,14 @@ export default {
     toggleAccordion() {
         this.isOpenAccordion = !this.isOpenAccordion;
     },
+    showMenu() {
+        this.isShowMenu = true;
+        document.documentElement.style.overflow = 'hidden';
+    },
+    hideMenu() {
+        this.isShowMenu = false;
+        document.documentElement.style.overflow = 'auto';
+    }
   },
 }
 </script>
