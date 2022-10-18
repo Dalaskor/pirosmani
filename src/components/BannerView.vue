@@ -51,10 +51,12 @@ export default {
     &__left {
         padding-top: 4rem;
         padding-left: 4rem;
+        padding-bottom: 1.6rem
     }
 
     &__right {
         margin-left: auto;
+        width: 41rem;
     }
 
     &__title {
@@ -82,14 +84,20 @@ export default {
 
     &__img {
         max-width: 41rem;
-        max-height: 25.3rem;
+        // max-height: 25.3rem;
+        height: 100%;
         border-radius: 1.8rem;
 
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
+
+        // @media (max-width: 48rem) {
+        //     max-width: 17.5rem;
+        //     max-height: 10rem;
+        // }
     }
 }
 </style>
