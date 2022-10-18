@@ -2,8 +2,8 @@
 section.food-nav
     .food-nav__container
         swiper(
-            :slides-per-view="5",
-            :space-between="95",
+            :slides-per-view="4",
+            :space-between="40",
             :loop="true",
             :navigation="{nextEl: '.food-nav__next'}",
             @swiper="onSwiper",
