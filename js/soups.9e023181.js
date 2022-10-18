@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkpirosmani"]=self["webpackChunkpirosmani"]||[]).push([[93],{6750:function(n,e,r){r.r(e),r.d(e,{default:function(){return p}});var u=r(3396);function i(n,e,r,i,o,t){const a=(0,u.up)("BannerView"),s=(0,u.up)("FoodNavView"),c=(0,u.up)("AllProductsView");return(0,u.wg)(),(0,u.iD)(u.HY,null,[(0,u.Wm)(a),(0,u.Wm)(s),(0,u.Wm)(c)],64)}var o=r(8030),t=r(2534),a=r(632),s={components:{BannerView:o.Z,FoodNavView:t.Z,AllProductsView:a.Z}},c=r(89);const l=(0,c.Z)(s,[["render",i]]);var p=l}}]);
+//# sourceMappingURL=soups.9e023181.js.map

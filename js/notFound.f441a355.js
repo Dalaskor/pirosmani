@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkpirosmani"]=self["webpackChunkpirosmani"]||[]).push([[449],{2470:function(n,a,e){e.r(a),e.d(a,{default:function(){return l}});var r=e(3396);const t=n=>((0,r.dD)("data-v-0a8db4c7"),n=n(),(0,r.Cn)(),n),c={class:"fail"},i=t((()=>(0,r._)("p",null,"СТРАНИЦА НЕ НАЙДЕНА",-1))),s=[i];function u(n,a,e,t,i,u){return(0,r.wg)(),(0,r.iD)("div",c,s)}var d={name:"NotFoundView"},o=e(89);const f=(0,o.Z)(d,[["render",u],["__scopeId","data-v-0a8db4c7"]]);var l=f}}]);
+//# sourceMappingURL=notFound.f441a355.js.map
