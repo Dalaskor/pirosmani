@@ -59,14 +59,30 @@ export default {
         padding-bottom: 3.4rem;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 48rem) {
+            flex-wrap: wrap;
+        }
     }
 
-    &__column {}
+    &__column {
+
+        @media (max-width: 48rem) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+    }
 
     &__phones {
         display: flex;
         align-items: center;
         gap: 6rem;
+
+        @media (max-width: 48rem) {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
     }
 
     &__phone {
@@ -130,6 +146,12 @@ export default {
         display: flex;
         align-items: center;
         gap: 3.3rem;
+
+        @media (max-width: 48rem) {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: start;
+        }
     }
 
     &__copyright {}
@@ -156,6 +178,10 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 2.5rem;
+
+        @media (max-width: 48rem) {
+            gap: 0.5rem;
+        }
     }
 
     &__social {
