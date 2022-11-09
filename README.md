@@ -4,6 +4,8 @@ Pirosmani online food store on Vue3.Js with Route and Vuex
 
 DEMO: https://dalaskor.github.io/pirosmani/
 
+![Preview](https://github.com/Dalaskor/pirosmani/blob/master/src/assets/Preview.png?raw=true)
+
 ## Project setup
 ```
 npm install
